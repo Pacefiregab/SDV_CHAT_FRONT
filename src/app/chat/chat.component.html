@@ -1,0 +1,12 @@
+<div>
+  <ul>
+    <li *ngFor="let m of messages">{{ m }}</li>
+  </ul>
+  <input [(ngModel)]="messageContent" (keydown.enter)="sendMessage()"
+    type="text">
+  <input [(ngModel)]="sender" placeholder="You are" type="text">
+  <input [(ngModel)]="dest" placeholder="You send to" type="text">
+  <input [(ngModel)]="topicDest" placeholder="You send to Topic (Optional)"
+    type="text">
+  <button (click)="sendMessage()">Send</button>
+</div>
